@@ -1,0 +1,128 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.container {
+  margin: 20px, auto;
+  max-width: 1080px;
+}
+
+.header__nav {
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.card-img-top {
+  padding: 40px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.home {
+  margin-bottom: 30px;
+}
+
+.products {
+  margin-bottom: 30px;
+}
+
+.products__h2 {
+  margin-bottom: 15px;
+}
+
+.about {
+  margin-bottom: 30px;
+}
+
+.contact {
+  margin-bottom: 30px;
+}
+
+.footer {
+  background-color: rgb(120, 120, 120);
+  color: white;
+  padding: 30px;
+}
+
+.footer__div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.div__first,
+.div__second {
+  max-width: 450px;
+}
+
+.footer__copy {
+  background-color: rgb(90, 90, 90);
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.footer__copy-text {
+  margin: 0;
+  padding: 0;
+}
+
+.user__room {
+  display: flex;
+  margin: 20px auto;
+  max-width: 1500px;
+}
+
+.user__first {
+  margin-right: 70px;
+}
+
+.user__second {
+  margin-right: 50px;
+}
+
+.user__photo {
+  border: 1px solid black;
+}
+
+.user-info {
+  margin-bottom: 30px;
+}
+
+.orders {
+  margin-bottom: 15px;
+}
+
+.user__header {
+  margin-bottom: 15px;
+}
+
+.user__text {
+  font-size: 17px;
+}
+
+.user__list-item {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.user__link:hover {
+  text-decoration: underline;
+}
