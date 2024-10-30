@@ -5,6 +5,7 @@ from django.shortcuts import render
 def shop_index(request):
     return render(request, 'shopapp/index.html')
 
+
 def user_room(request):
     context = {
         "name": "Пётр",
@@ -13,5 +14,10 @@ def user_room(request):
     }
     return render(request, 'shopapp/user_room.html', context=context)
 
+
 def product_create(request):
     return render(request, 'shopapp/product-create.html')
+
+
+def register(request):
+    return render(request, 'shopapp/register.html')
