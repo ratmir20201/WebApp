@@ -18,6 +18,9 @@ def user_room(request:  HttpRequest) -> HttpResponse:
 def product_create(request:  HttpRequest):
     return render(request, 'shopapp/product-create.html')
 
+def register(request: HttpRequest) -> HttpResponse:
+    return render(request, 'shopapp/register.html')
+
 def book_list(request: HttpRequest) -> HttpResponse:
     books = Book.objects.all()
     total_books = books.count()

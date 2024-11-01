@@ -2,69 +2,70 @@
 {% load static %}
 
 {% block content %}
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <div class="container">
-    <header class="header">
-      <h1 class="display-1 logo">TechShop</h1>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary header__nav">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'shopapp:user_room' %}">Мой кабинет</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#home">Главная</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#products">Хиты</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">О нас</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Контакты</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Каталог
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Телефоны</a></li>
-                  <li><a class="dropdown-item" href="#">Ноутбуки</a></li>
-                  <li><a class="dropdown-item" href="#">Готовые сборки пк</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Поиск</button>
-            </form>
-          </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<div class="container">
+  <header class="header">
+    <h1 class="display-1 logo">TechShop</h1>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary header__nav">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'shopapp:user_room' %}">Мой кабинет</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Хиты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Контакты</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                 aria-expanded="false">
+                Каталог
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Телефоны</a></li>
+                <li><a class="dropdown-item" href="#">Ноутбуки</a></li>
+                <li><a class="dropdown-item" href="#">Готовые сборки пк</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Поиск</button>
+          </form>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-      <section id="home" class="home">
-        <h2 class="h2 display-5">Главная</h2>
-        <p class="lead">Добро пожаловать в TechShop — ваш новый онлайн-магазин, где будущее технологий становится
-          доступным уже сегодня. Мы рады представить вам широкий ассортимент продукции, который включает в себя
-          последние модели телефонов, ноутбуков, гаджетов для ПК и самих ПК, созданных для того, чтобы соответствовать
-          самым высоким стандартам.</p>
-      </section>
+  <main>
+    <section id="home" class="home">
+      <h2 class="h2 display-5">Главная</h2>
+      <p class="lead">Добро пожаловать в TechShop — ваш новый онлайн-магазин, где будущее технологий становится
+        доступным уже сегодня. Мы рады представить вам широкий ассортимент продукции, который включает в себя
+        последние модели телефонов, ноутбуков, гаджетов для ПК и самих ПК, созданных для того, чтобы соответствовать
+        самым высоким стандартам.</p>
+    </section>
 
-      <section id="products" class="products">
-        <h2 class="h2 display-5 products__h2">Популярные товары</h2>
-        <div class="card-group">
+    <section id="products" class="products">
+      <h2 class="h2 display-5 products__h2">Популярные товары</h2>
+      <div class="card-group">
+        <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="card">
             <img src="{% static 'img/popular_tel.webp' %}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -77,6 +78,8 @@
               <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
             </div>
           </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="card">
             <img src="{% static 'img/popular_lapt.jpg' %}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -87,6 +90,8 @@
               <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
             </div>
           </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
           <div class="card">
             <img src="{% static 'img/popular_pc.jpg' %}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -97,63 +102,64 @@
             </div>
           </div>
         </div>
-      </section>
-      <section id="about" class="about">
-        <h2 class="h2 display-5">О нас</h2>
-        <p class="lead">Мы — команда профессионалов, стремящихся предоставить вам лучшие технологии по самым
-          выгодным ценам.
-          Наши
-          клиенты всегда могут рассчитывать на качественное обслуживание и поддержку.</p>
-      </section>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <h2 class="h2 display-5">О нас</h2>
+      <p class="lead">Мы — команда профессионалов, стремящихся предоставить вам лучшие технологии по самым
+        выгодным ценам.
+        Наши
+        клиенты всегда могут рассчитывать на качественное обслуживание и поддержку.</p>
+    </section>
 
-      <section id="contact" class="contact">
-        <h2 class="h2 display-5">Контакты</h2>
-        <p class="lead">Адрес: ул. Примерная, д. 1, г. Примерск</p>
-        <p class="lead">Телефон: +7 (123) 456-78-90</p>
-        <p class="lead">Email: info@techstore.ru</p>
-      </section>
-    </main>
-  </div>
+    <section id="contact" class="contact">
+      <h2 class="h2 display-5">Контакты</h2>
+      <p class="lead">Адрес: ул. Примерная, д. 1, г. Примерск</p>
+      <p class="lead">Телефон: +7 (123) 456-78-90</p>
+      <p class="lead">Email: info@techstore.ru</p>
+    </section>
+  </main>
+</div>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__div">
-        <div class="div__first">
-          <h2 class="display-3">TechShop</h2>
-          <p class="lead">Дата основания: 2024 год</p>
-          <p class="lead">
-            Добро пожаловать в TechShop — ваш новый онлайн-магазин, где будущее технологий становится доступным уже
-            сегодня. Мы рады представить вам широкий ассортимент продукции, который включает в себя последние модели
-            телефонов, ноутбуков, гаджетов для ПК и самих ПК, созданных для того, чтобы соответствовать самым высоким
-            стандартам.</p>
-        </div>
-        <div class="div__second">
-          <h2 class="h3">Наш ассортимент:</h2>
-          <ul class="footer__list">
-            <li class="footer__list-item"><strong>
-                Телефоны:</strong> от флагманских моделей до бюджетных решений, с уникальными функциями и современными
-              технологиями.
-            </li>
-            <li class="footer__list-item"><strong>
-                Ноутбуки:</strong> легкие и мощные, с разнообразными характеристиками для профессионалов, студентов и
-              геймеров.
-            </li>
-            <li class="footer__list-item"><strong>
-                Гаджеты для ПК:</strong> от мышек и клавиатур до внешних накопителей и игровых аксессуаров.
-            </li>
-            <li class="footer__list-item"><strong>
-                Компьютеры:</strong> собранные из качественных компонентов для любых задач — от офисной работы до
-              сложного
-              редактирования видео и игр.
-            </li>
-          </ul>
-        </div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__div">
+      <div class="div__first">
+        <h2 class="display-3">TechShop</h2>
+        <p class="lead">Дата основания: 2024 год</p>
+        <p class="lead">
+          Добро пожаловать в TechShop — ваш новый онлайн-магазин, где будущее технологий становится доступным уже
+          сегодня. Мы рады представить вам широкий ассортимент продукции, который включает в себя последние модели
+          телефонов, ноутбуков, гаджетов для ПК и самих ПК, созданных для того, чтобы соответствовать самым высоким
+          стандартам.</p>
+      </div>
+      <div class="div__second">
+        <h2 class="h3">Наш ассортимент:</h2>
+        <ul class="footer__list">
+          <li class="footer__list-item"><strong>
+            Телефоны:</strong> от флагманских моделей до бюджетных решений, с уникальными функциями и современными
+            технологиями.
+          </li>
+          <li class="footer__list-item"><strong>
+            Ноутбуки:</strong> легкие и мощные, с разнообразными характеристиками для профессионалов, студентов и
+            геймеров.
+          </li>
+          <li class="footer__list-item"><strong>
+            Гаджеты для ПК:</strong> от мышек и клавиатур до внешних накопителей и игровых аксессуаров.
+          </li>
+          <li class="footer__list-item"><strong>
+            Компьютеры:</strong> собранные из качественных компонентов для любых задач — от офисной работы до
+            сложного
+            редактирования видео и игр.
+          </li>
+        </ul>
       </div>
     </div>
-  </footer>
-  <div class="footer__copy">
-    <div class="container">
-      <p class="lead footer__copy-text">&copy; 2024 Техномагазин. Все права защищены.</p>
-    </div>
   </div>
+</footer>
+<div class="footer__copy">
+  <div class="container">
+    <p class="lead footer__copy-text">&copy; 2024 Техномагазин. Все права защищены.</p>
+  </div>
+</div>
 {% endblock %}
