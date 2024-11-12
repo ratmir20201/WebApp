@@ -1,0 +1,51 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+
+{% block content %}
+{% if user.is_authenticated%}
+<div class="user__room">
+  <div class="user__first">
+    <h2 class="h2">Меню:</h2>
+    <ul class="list-unstyled">
+      <li class="user__list-item"><a class="user__link" href="#">Профиль</a></li>
+      <li class="user__list-item"><a class="user__link" href="#">Мои заказы</a></li>
+      <li class="user__list-item"><a class="user__link" href="{% url 'shopapp:product_create' %}">Создание продукта</a>
+      </li>
+      <li class="user__list-item"><a class="user__link" href="#">Настройки</a></li>
+      <li class="user__list-item">
+        <form method="post" action="{% url 'registration:logout' %}">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-secondary">Выйти</button>
+        </form>
+      </li>
+    </ul>
+  </div>
+  <div class="user__second">
+    <div class="container">
+      <section class="content">
+        <h2 class="display-5 user__header">Добро пожаловать, {{ user.username }}!</h2>
+
+        <div class="user-info">
+          <h3 class="h3">Профиль</h3>
+          <p class="user__text"><strong>Имя:</strong> {{ user.username }}</p>
+          <p class="user__text"><strong>Email:</strong> {{ user.profile.email }}</p>
+          <p class="user__text"><strong>Телефон:</strong> {{ user.profile.phone_number }}</p>
+          <a href="#">Редактировать профиль</a>
+        </div>
+
+        <div class="orders">
+          <h3 class="h3">Мои заказы</h3>
+          <p>Последний заказ: <a href="#">Детали заказа</a></p>
+          <a href="#">Посмотреть все заказы</a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="user__third">
+    <img src="{% static 'img/User_photo.jfif' %}" class="rounded float-end user__photo" alt="...">
+  </div>
+</div>
+{% else %}
+<h2>User is anonymous</h2>
+{% endif %}
+{% endblock %}

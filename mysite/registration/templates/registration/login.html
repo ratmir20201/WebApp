@@ -1,0 +1,49 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}
+TechShop вход
+{% endblock %}
+
+{% block content %}
+<form class="create-form" method="post">
+  {% csrf_token %}
+  <h1 class="h1">Вход</h1>
+
+  {% if form.non_field_errors %}
+  <div class="text-danger">
+    {% for error in form.non_field_errors %}
+    <p>{{ error }}</p>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="mb-3">
+    <label class="form-label">Имя:</label>
+    {{ form.username|add_class:"form-control" }}
+    {% if form.username.errors %}
+    <div class="text-danger">
+      {% for error in form.username.errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Пароль:</label>
+    {{ form.password|add_class:"form-control" }}
+    {% if form.password.errors %}
+    <div class="text-danger">
+      {% for error in form.password.errors %}
+      <p>{{ error }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  <button type="submit" class="btn btn-primary">Войти</button>
+</form>
+
+{% endblock %}
