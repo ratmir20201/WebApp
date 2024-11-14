@@ -25,3 +25,14 @@ services:
     ports:
       - "3100:3100"
 
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.10.0
+    environment:
+      - discovery.type=single-node  # настройка для запуска одной ноды (полезно для разработки)
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m  # Параметры Java, выделяющие 512MB памяти
+      - xpack.security.enabled=false
+      - xpack.security.transport.ssl.enabled=false
+      - xpack.security.http.ssl.enabled=false
+    ports:
+      - "9200:9200"
+      - "9300:9300"
